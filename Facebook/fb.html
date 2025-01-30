@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Clone</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f0f2f5; }
+        .navbar { background: #1877f2; padding: 10px; color: white; text-align: center; font-size: 24px; position: fixed; top: 0; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; z-index: 1000; }
+        .navbar input { padding: 5px; border-radius: 20px; border: none; width: 250px; }
+        .container { display: flex; justify-content: space-between; padding: 90px 20px 20px; }
+        .left-layout, .right-layout { background: white; padding: 15px; margin: 10px; border-radius: 8px; width: 20%; height: 100vh; }
+        .home-feed { background: white; padding: 15px; margin: 10px; border-radius: 8px; width: 55%; }
+        .story-section { display: flex; gap: 10px; padding: 10px; overflow-x: auto; white-space: nowrap; }
+        .story { width: 100px; height: 150px; background: lightgray; text-align: center; padding: 5px; border-radius: 10px; position: relative; cursor: pointer; }
+        .story img { width: 100%; height: 100%; border-radius: 10px; }
+        .post { padding: 10px; background: #fff; margin-top: 10px; border-radius: 8px; }
+        .post input { width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px; }
+        .buttons { display: flex; justify-content: space-between; margin-top: 10px; }
+        .buttons button { padding: 10px; border: none; cursor: pointer; border-radius: 5px; background: #1877f2; color: white; }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div>Facebook Clone</div>
+        <input type="text" placeholder="Search Facebook...">
+        <div><i class="fa fa-bell"></i> <i class="fa fa-user"></i></div>
+    </div>
+    <div class="container">
+        <div class="left-layout">Menu & Friends List</div>
+        <div class="home-feed">
+            <div class="story-section">
+                <div class="story"><img src="story1.jpg" alt="Story 1"></div>
+                <div class="story"><img src="story2.jpg" alt="Story 2"></div>
+                <div class="story"><img src="story3.jpg" alt="Story 3"></div>
+                <div class="story"><img src="story4.jpg" alt="Story 4"></div>
+            </div>
+            <div class="post">
+                <input type="text" placeholder="What's on your mind?">
+                <div class="buttons">
+                    <button>Post</button>
+                    <button>Upload Image</button>
+                </div>
+            </div>
+        </div>
+        <div class="right-layout">Sponsored & Contacts</div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $(".story").on("click", function() {
+                alert("Viewing Story: " + $(this).find("img").attr("alt"));
+            });
+        });
+    </script>
+</body>
+</html>

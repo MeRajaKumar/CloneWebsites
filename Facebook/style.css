@@ -6,3 +6,30 @@
     --fifth-color: #E5E8EB;
     --six-color: #B8BBBF;
 }
+*{
+    margin: 0%;
+    padding: 0px;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    background-image: #F2F4F7;
+}
+nav{
+    height: 8vh;
+    background-color: #FFFFFF;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+    align-items: center;
+    padding: 0px 20px;
+}
+nav div img{
+    height: 40px;
+    width: 40px;
+}
+nav div .nav-icon{
+    padding: 9px;
+    font-size: 1.5rem;
+    background-color: #D6D9DD;
+    border-radius: 35%;
+}
