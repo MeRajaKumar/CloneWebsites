@@ -1,35 +1,259 @@
-:root{
-    --first-color: #252728;
-    --second-color: #1C1C1D;
-    --third-color: #484849;
-    --forth-color: #B1B3B7;
-    --fifth-color: #E5E8EB;
-    --six-color: #B8BBBF;
-}
 *{
-    margin: 0%;
+    margin: 0px;
     padding: 0px;
-    scroll-behavior: smooth;
     box-sizing: border-box;
-    background-image: #F2F4F7;
+    scroll-behavior: smooth;
 }
-nav{
-    height: 8vh;
-    background-color: #FFFFFF;
+body {
+    background-color: #efeeee;
+    font-family: Arial, sans-serif;
+}
+.nav-bar {
     width: 100%;
+    height: 8vh;
     display: flex;
     justify-content: space-between;
-    border: 2px solid black;
-    align-items: center;
+    background-color: #ffffff;
+    position: fixed;
     padding: 0px 20px;
+    align-items: center;
 }
-nav div img{
-    height: 40px;
+.logo-search{
+    /* width: 400px; */
+    display: flex;
+    align-items: center;
+}
+.logo-search .logo{
+    font-size: 38px;
+    align-items: center;
+}
+.logo-search .search{
+    display: flex;
+    background-color: #f1f0f0;
+    width: 260px;
+    align-items: center;
+    border-radius: 40px;
+    padding: 8px 10px;
+    margin-left: 5px;
+}
+
+.logo {
+    /* margin-left: 21px;
+    align-content: center;
+     */
+}
+/* .search {
+    
+} */
+/* 
+
+.selo {
+    margin-top: 4px;
+}
+
+input {
+    background-color: #f1f0f0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: hidden;
+    font-size: 14px;
+}
+
+.menu {
+    width: 680px;
+    margin-left: 90px;
+    text-align: center;
+    font-size: 26px;
+    align-items: center;
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.navigation {
+    width: 200px;
+    margin-left: 170px;
+    font-size: 35px;
+    text-align: right;
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+section {
+    display: flex;
+    gap: 120px;
+} 
+
+.left {
+    width: 20%;
+    height: 600px;
+    padding: 10px;
+    margin-top: 60px;
+    text-align: left;
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    position: fixed;
+    left: 0;
+}
+
+.left>div {
+    font-size: 17px;
+}
+
+.left div i {
+    font-size: 25px;
+    padding-top: 2px;
+}
+
+.first {
+    text-align: center;
+}
+
+.first img {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+}
+
+.second {
+    margin-top: -11px;
+    margin-left: -11px;
+}
+
+.middle {
+    width: 42.6%;
+    padding: 10px;
+    margin: 60px 413px;
+}
+
+.top {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.top1 {
+    display: flex;
+    text-align: center;
+}
+
+.top1 img {
     width: 40px;
+    height: 40px;
+    border-radius: 30px;
 }
-nav div .nav-icon{
-    padding: 9px;
-    font-size: 1.5rem;
-    background-color: #D6D9DD;
-    border-radius: 35%;
+
+.top1 input {
+    background-color: #f1f0f0;
+    width: 520px;
+    height: 40px;
+    margin-left: 20px;
+    border-radius: 50px;
+}
+
+.top2 {
+    width: 100%;
+    margin-left: 22px;
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    grid-template: space-between;
+    font-size: 16px;
+} */
+
+.top2 div {
+    display: flex;
+    padding: 5px;
+}
+
+.top2 div i {
+    font-size: 30px;
+}
+
+.text {
+    margin-top: 5px;
+}
+
+.story {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.story-box {
+    margin-top: 12px;
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.story-box img {
+    max-width: 100%;
+    max-height: 100%;
+    min-height: 200px;
+    border-radius: 8px;
+}
+
+.story-box p {
+    padding: 10px;
+}
+
+.right {
+    width: 22%;
+    padding: 5px;
+    margin-top: 60px;
+    position: fixed;
+    right: 0;
+}
+
+.side1 {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+}
+
+.side1 i {
+    font-size: 29px;
+    padding: 10px;
+}
+
+.render {
+    gap: 10px;
+    text-align: center;
+}
+
+.content-box {
+    width: 100%;
+    height: 750px;
+    margin-top: 12px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.side2 {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+}
+
+.side2 img {
+    width: 35px;
+    height: 35px;
+    border: 2px solid blue;
+    border-radius: 25px;
+}
+
+.fn {
+    padding: 10px;
 }
