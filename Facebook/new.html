@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav class="nav">
+        <div class="logo">
+            <a href="#"><i class='bx bxl-facebook-circle' style='color:#07a1e3'></i></a>
+        </div>
+        <div class="search">
+            <i class='bx bx-search-alt-2' style='color:#c5c5d4'></i>
+            <input type="text" placeholder="Search Facebook">
+        </div>
+        <div class="menu">
+            <a href="#"><i class='bx bxs-home' style='color:#2430a6'></i></a>
+            <a href="#"><i class='bx bxs-videos' style='color:#2430a6'></i></a>
+            <a href="#"><i class='bx bx-store' style='color:#2430a6'></i></a>
+            <a href="#"><i class='bx bxs-user-circle' style='color:#2430a6'></i></a>
+            <a href="#"><i class='bx bx-joystick-alt'></i></a>
+        </div>
+        <div class="navigation">
+            <a href="#"><i class='bx bxs-grid' style='color:#2430a6'></i></a>
+            <a href="#"><i class='bx bxl-messenger' style='color:#2430a6'></i></a>
+            <a href="#"><i class='bx bxs-bell' style='color:#2430a6'></i></a>
+            <a href="#"><i class='bx bxs-user-circle' style='color:#2430a6'></i></a>
+        </div>
+    </nav>
+    
+    <section class="container">
+        <div class="left-panel">
+            <div class="profile">
+                <img src="Pic.jpeg" alt="Profile Picture">
+                <p>Aayush Gupta</p>
+            </div>
+            <ul>
+                <li><i class='bx bxs-group'></i> Friends</li>
+                <li><i class='bx bxs-time-five'></i> Memories</li>
+                <li><i class='bx bxs-bookmark'></i> Saved</li>
+                <li><i class='bx bxs-group'></i> Groups</li>
+                <li><i class='bx bxs-store'></i> Marketplace</li>
+                <li><i class='bx bxs-videos'></i> Videos</li>
+                <li><i class='bx bxs-calendar-star'></i> Events</li>
+            </ul>
+        </div>
+        
+        <div class="middle-panel">
+            <div class="post-box">
+                <img src="Pic.jpeg" alt="Profile">
+                <input type="text" placeholder="What's on your mind, Aayush?">
+            </div>
+            <div class="story-section" id="story-container"></div>
+            <div class="feed-section" id="content-container"></div>
+        </div>
+        
+        <div class="right-panel">
+            <h3>Birthdays</h3>
+            <p><i class='bx bxs-gift'></i> Your Friend's birthday is today.</p>
+            <h3>Contacts</h3>
+            <ul id="contact-list">
+                <li><img src="https://randomuser.me/api/portraits/men/88.jpg" alt="Rahul"> Rahul Kumar</li>
+                <li><img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Aman"> Aman Singh</li>
+            </ul>
+        </div>
+    </section>
+    
+    <script>
+        const stories = [
+            { type: 'image', content: 'https://source.unsplash.com/random/200x200?sig=1' },
+            { type: 'image', content: 'https://source.unsplash.com/random/200x200?sig=2' },
+            { type: 'image', content: 'https://source.unsplash.com/random/200x200?sig=3' }
+        ];
+
+        function renderStories(storyData) {
+            const container = document.getElementById('story-container');
+            container.innerHTML = '';
+            storyData.forEach(story => {
+                const box = document.createElement('div');
+                box.className = 'story-box';
+                const img = document.createElement('img');
+                img.src = story.content;
+                box.appendChild(img);
+                container.appendChild(box);
+            });
+        }
+        renderStories(stories);
+
+        const postmessage = [
+            { type: 'image', content: 'https://source.unsplash.com/random/400x300?sig=4' },
+            { type: 'image', content: 'https://source.unsplash.com/random/400x300?sig=5' },
+            { type: 'image', content: 'https://source.unsplash.com/random/400x300?sig=6' }
+        ];
+
+        function contentData(post) {
+            const container = document.getElementById("content-container");
+            container.innerHTML = '';
+            post.forEach(render => {
+                const box = document.createElement('div');
+                box.className = "content-box";
+                const img = document.createElement('img');
+                img.src = render.content;
+                box.appendChild(img);
+                container.appendChild(box);
+            });
+        }
+        contentData(postmessage);
+    </script>
+</body>
+</html>

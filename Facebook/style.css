@@ -1,51 +1,33 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
 body {
     background-color: #efeeee;
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
 }
-.nav-bar {
+
+.nav {
     width: 100%;
-    height: 8vh;
+    padding-top: 5px;
     display: flex;
-    justify-content: space-between;
     background-color: #ffffff;
     position: fixed;
-    padding: 0px 20px;
-    align-items: center;
-}
-.logo-search{
-    /* width: 400px; */
-    display: flex;
-    align-items: center;
-}
-.logo-search .logo{
-    font-size: 38px;
-    align-items: center;
-}
-.logo-search .search{
-    display: flex;
-    background-color: #f1f0f0;
-    width: 260px;
-    align-items: center;
-    border-radius: 40px;
-    padding: 8px 10px;
-    margin-left: 5px;
 }
 
 .logo {
-    /* margin-left: 21px;
+    margin-left: 21px;
     align-content: center;
-     */
+    font-size: 41px;
 }
-/* .search {
-    
-} */
-/* 
+
+.search {
+    background-color: #f1f0f0;
+    width: 15%;
+    align-items: center;
+    border-radius: 40px;
+    margin: 1px 11px 6px 11px;
+    padding: 3px;
+    display: flex;
+}
 
 .selo {
     margin-top: 4px;
@@ -82,7 +64,7 @@ input {
 section {
     display: flex;
     gap: 120px;
-} 
+}
 
 .left {
     width: 20%;
@@ -158,7 +140,7 @@ section {
     grid-template-columns: auto auto auto;
     grid-template: space-between;
     font-size: 16px;
-} */
+}
 
 .top2 div {
     display: flex;
@@ -252,8 +234,13 @@ section {
     height: 35px;
     border: 2px solid blue;
     border-radius: 25px;
+    object-fit: cover;
 }
 
 .fn {
     padding: 10px;
+}
+.post-img{
+    height: 100%;
+    width: 100%;
 }
